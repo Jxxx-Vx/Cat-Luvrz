@@ -107,8 +107,12 @@
     
     
     if ($conn->query($sql) === TRUE) {
-
+        $url = 'http://localhost:3000/';
+        header( "Location: $url");
     } else {
+        echo '<script type="text/javascript">';
+        echo "alert(" . "Error: " . $sql . "<br>" . $conn->error .")"; 
+        echo '</script>';
       echo "Error: " . $sql . "<br>" . $conn->error;
     }
 

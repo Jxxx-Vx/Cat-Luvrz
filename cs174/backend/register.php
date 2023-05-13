@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: https://earnest-selkie-bee4d4.netlify.app/register');
+header('Access-Control-Allow-Origin: https://ornate-praline-4660dc.netlify.app/');
 $servername = "cos-cs106.science.sjsu.edu";
 $username = "catluvrsuser";
 $password = "xW#Z53T#Wx";
@@ -132,7 +132,7 @@ $sql = "INSERT INTO catluvrsdb.users
 
 
 if ($conn->query($sql) === TRUE) {
-    $url = 'https://earnest-selkie-bee4d4.netlify.app';
+    $url = 'https://ornate-praline-4660dc.netlify.app';
     header("Location: $url");
 } else {
     echo '<script type="text/javascript">';

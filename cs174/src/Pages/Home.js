@@ -58,9 +58,13 @@ const Home = () => {
         }
     ]
 
-    const matched_ids_string = window.location.href;
-    console.log(matched_ids_string);
+    const url_string = window.location.href;
+    const pets_data_str = url_string.split('=')[1];
     const characters = [];
+    for(var i = 0; i < pets_data_str.length; i++){
+        characters.push(all_characters[pets_data_str.charAt(i)-1]);
+    }
+    console.log(characters);
     // if(matched_ids_string != undefined){
     //     const matched_ids = matched_ids_string.trim().split(' ');
     //     matched_ids.forEach(element => characters.push(all_characters[element-1]));
